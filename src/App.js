@@ -1,10 +1,15 @@
-import FormExample from "./test";
+import Form from "./components/Form/Form";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Cadastro de Compras sem NFE:</h1>
-      <FormExample />
+      <section className="container">
+        <div>
+          <h2>Cadastro de Compras sem NFE</h2>
+          <Form />
+        </div>
+      </section>
     </div>
   );
 }
