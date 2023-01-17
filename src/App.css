@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: rgba(240, 228, 202, 255);
+  --secondary-color: rgba(197, 153, 106, 255);
+  --terciary-color: rgba(84, 111, 78, 255);
+  --terciary-hover-color: rgba(84, 131, 78, 255);
+  --terciary-highligth-color: rgba(44, 121, 58, 0.5);
+  --light-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  padding: 1.5rem 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.container h2 {
+  color: var(--terciary-color);
+  font-size: 2.2rem;
+  text-shadow: var(--light-shadow);
+  font-family: "Roboto", sans-serif;
+  background-color: var(--terciary-highligth-color);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.container div {
+  width: 80%;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0.765rem;
+  border-radius: 12px;
+}
