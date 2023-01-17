@@ -1,0 +1,82 @@
+.Form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+}
+
+.Form label,
+.Form .DateTime label {
+  font-size: 1.275rem;
+}
+
+.Form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.Form label input,
+.Form .DateTime label input {
+  margin-top: 0.7rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(211, 211, 211, 0.188);
+}
+
+.Form label input[type="file"] {
+  border: none;
+}
+
+.Form .ShopInfoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -6rem;
+}
+
+.Form .DateTime {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.Form .ProdutosContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.Form .ProdutosContainer h5 {
+  font-size: 1.4rem;
+  margin-bottom: -0.3rem;
+}
+
+.Form .ProdutosContainer .Produtos {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.Form .SubmitButton {
+  width: 15rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: var(--light-shadow);
+  background-color: var(--terciary-color);
+  color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 4px;
+}
+
+.Form .SubmitButton:hover {
+  background-color: var(--terciary-hover-color);
+}
