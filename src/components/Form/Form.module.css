@@ -29,6 +29,10 @@
   flex-direction: column;
 }
 
+.Form input[type="number"] {
+  text-align: right;
+}
+
 .Form label input,
 .Form .DateTime label input,
 .Form .ShopInfoContainer .ShopInfo label input {
@@ -51,7 +55,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: -5rem;
+  margin-bottom: -4rem;
+  z-index: 100;
 }
 
 .Form .ShopInfoContainer .ShopInfo {
