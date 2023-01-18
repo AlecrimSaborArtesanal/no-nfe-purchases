@@ -44,6 +44,7 @@ const ShoppingForm = () => {
               value={formData.date}
               name="date"
               onChange={handleChange}
+              min="2023-01-18"
             />
           </label>
           <label>
