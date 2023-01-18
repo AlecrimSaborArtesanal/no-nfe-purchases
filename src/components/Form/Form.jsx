@@ -33,10 +33,11 @@ const ShoppingForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.Form}>
-      <div className={styles.ShopInfoContainer}>
+      <h2>Cadastro de Compras sem NFE</h2>
+      <section className={styles.ShopInfoContainer}>
         <div className={styles.DateTime}>
           <label>
-            Data:
+            Que dia comprou?
             <input
               type="date"
               value={formData.date}
@@ -45,7 +46,7 @@ const ShoppingForm = () => {
             />
           </label>
           <label>
-            Hora:
+            Que horas comprou?
             <input
               type="time"
               value={formData.time}
@@ -55,9 +56,9 @@ const ShoppingForm = () => {
           </label>
         </div>
 
-        <div className="ShopInfo">
+        <div className={styles.ShopInfo}>
           <label>
-            Nome Do Estabelecimento:
+            Onde Comprou?
             <input
               type="text"
               value={formData.establishmentName}
@@ -66,7 +67,7 @@ const ShoppingForm = () => {
             />
           </label>
           <label>
-            Nome do Comprador:
+            Quem comprou?
             <input
               type="text"
               value={formData.buyerName}
@@ -75,7 +76,19 @@ const ShoppingForm = () => {
             />
           </label>
         </div>
-      </div>
+        <div className={styles.ReceiptContainer}>
+          <label>
+            Enviar Foto da Nota
+            <input
+              type="file"
+              name="receiptImage"
+              value={formData.receiptImage}
+              onChange={handleImageChange}
+              accept="image/*, application/pdf"
+            />
+          </label>
+        </div>
+      </section>
 
       <div className={styles.ProdutosContainer}>
         <h5>Produtos:</h5>
@@ -100,16 +113,14 @@ const ShoppingForm = () => {
           </label>
         </div>
       </div>
-      <label>
-        Foto da nota:
+
+      <div>
         <input
-          type="file"
-          name="receiptImage"
-          value={formData.receiptImage}
-          onChange={handleImageChange}
+          type="submit"
+          value="Cadastrar Nota"
+          className={styles.SubmitButton}
         />
-      </label>
-      <input type="submit" value="Enviar" className={styles.SubmitButton} />
+      </div>
     </form>
   );
 };
