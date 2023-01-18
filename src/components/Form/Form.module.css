@@ -1,15 +1,27 @@
 .Form {
-  width: 60%;
   display: flex;
+  width: 100%;
   flex-direction: column;
   padding: 2rem 3rem;
-  background-color: transparent;
+  background-color: whitesmoke;
   font-family: "Roboto", sans-serif;
+  box-shadow: var(--light-shadow);
+}
+
+.Form h2 {
+  color: var(--terciary-color);
+  font-size: 2.2rem;
+  text-align: center;
+  text-shadow: var(--light-shadow);
+  font-family: "Roboto", sans-serif;
+  background-color: var(--terciary-highligth-color);
+  padding: 1rem;
+  border-radius: 5px;
 }
 
 .Form label,
 .Form .DateTime label {
-  font-size: 1.275rem;
+  font-size: 1rem;
 }
 
 .Form label {
@@ -18,29 +30,51 @@
 }
 
 .Form label input,
-.Form .DateTime label input {
+.Form .DateTime label input,
+.Form .ShopInfoContainer .ShopInfo label input {
   margin-top: 0.7rem;
-  height: 2rem;
-  padding: 0.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: 0.625rem;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  background-color: rgba(211, 211, 211, 0.188);
+  background-color: whitesmoke;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.09);
 }
 
 .Form label input[type="file"] {
   border: none;
+  display: none;
 }
 
 .Form .ShopInfoContainer {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: -6rem;
+  margin-bottom: -5rem;
+}
+
+.Form .ShopInfoContainer .ShopInfo {
+  display: flex;
+  gap: 2rem;
+}
+
+.Form .ShopInfoContainer .ShopInfo h5 {
+  align-self: flex-start;
+}
+
+.Form .ShopInfoContainer .ReceiptContainer label {
+  padding: 1.2rem 0.8rem;
+  width: 13rem;
+  background-color: var(--terciary-color);
+  border-radius: 10px;
+  color: var(--primary-color);
+  text-align: center;
+  letter-spacing: 3px;
+  cursor: pointer;
 }
 
 .Form .DateTime {
-  width: 40%;
   display: flex;
   justify-content: flex-start;
   gap: 2rem;
@@ -65,8 +99,8 @@
 }
 
 .Form .SubmitButton {
-  width: 15rem;
-  height: 2rem;
+  width: 70%;
+  height: 3rem;
   border-radius: 10px;
   border: none;
   box-shadow: var(--light-shadow);
@@ -74,9 +108,11 @@
   color: var(--primary-color);
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
+  cursor: pointer;
 }
 
-.Form .SubmitButton:hover {
+.Form .SubmitButton:hover,
+.Form .ShopInfoContainer .ReceiptContainer label:hover {
   background-color: var(--terciary-hover-color);
 }
