@@ -1,5 +1,8 @@
 import { useState } from "react";
 import styles from "./Form.module.css";
+import { FiUpload, FiSend } from "react-icons/fi";
+
+// TODO consertar produto, deve ser um dicionário contendo nome, quantidade e valor
 
 const ShoppingForm = () => {
   const [formData, setFormData] = useState({
@@ -79,8 +82,9 @@ const ShoppingForm = () => {
           </label>
         </div>
         <div className={styles.ReceiptContainer}>
-          <label>
-            Enviar Foto da Nota
+          <label title="Enviar arquivo contendo imagem da Nota Fiscal">
+            <FiUpload />
+            Foto da Nota
             <input
               type="file"
               name="receiptImage"
@@ -106,14 +110,17 @@ const ShoppingForm = () => {
           </label>
           <label>
             Valor:
-            <input
-              type="number"
-              name="value"
-              value={formData.value}
-              onChange={handleChange}
-              min="0.05"
-              step="0.01"
-            />
+            <span>
+              R$
+              <input
+                type="number"
+                name="value"
+                value={formData.value}
+                onChange={handleChange}
+                min="0.05"
+                step="0.01"
+              />
+            </span>
           </label>
           <label>
             Quantidade:
@@ -128,11 +135,14 @@ const ShoppingForm = () => {
       </div>
 
       <div>
-        <input
-          type="submit"
-          value="Cadastrar Nota"
+        <label
           className={styles.SubmitButton}
-        />
+          title="Clique para cadastrar a nota no sistema"
+        >
+          <FiSend />
+          Cadastrar
+          <input type="submit" value="Cadastrar Nota" />
+        </label>
       </div>
     </form>
   );

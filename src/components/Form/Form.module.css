@@ -68,7 +68,8 @@
   align-self: flex-start;
 }
 
-.Form .ShopInfoContainer .ReceiptContainer label {
+.Form .ShopInfoContainer .ReceiptContainer label,
+.Form .SubmitButton {
   padding: 1.2rem 0.8rem;
   width: 13rem;
   background-color: var(--terciary-color);
@@ -77,6 +78,11 @@
   text-align: center;
   letter-spacing: 3px;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .Form .DateTime {
@@ -93,8 +99,9 @@
 }
 
 .Form .ProdutosContainer h5 {
-  font-size: 1.4rem;
-  margin-bottom: -0.3rem;
+  font-size: 1.6rem;
+  margin-bottom: -0.5rem;
+  color: var(--terciary-color);
 }
 
 .Form .ProdutosContainer .Produtos {
@@ -103,18 +110,19 @@
   gap: 1rem;
 }
 
-.Form .SubmitButton {
-  width: 70%;
-  height: 3rem;
-  border-radius: 10px;
-  border: none;
-  box-shadow: var(--light-shadow);
-  background-color: var(--terciary-color);
-  color: var(--primary-color);
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  letter-spacing: 3px;
-  cursor: pointer;
+.Form .ProdutosContainer .Produtos label span {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.Form .ProdutosContainer .Produtos label span input {
+  width: 8rem;
+}
+
+.Form .SubmitButton input {
+  display: none;
 }
 
 .Form .SubmitButton:hover,
