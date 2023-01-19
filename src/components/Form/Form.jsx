@@ -11,7 +11,6 @@ const ShoppingForm = () => {
     establishmentName: "",
     product: "",
     value: "",
-    quantity: 0,
     buyerName: "",
     receiptImage: [],
   });
@@ -97,10 +96,9 @@ const ShoppingForm = () => {
       </section>
 
       <div className={styles.ProdutosContainer}>
-        <h5>Produtos:</h5>
         <div className={styles.Produtos}>
           <label>
-            Nome:
+            Descrição:
             <input
               type="text"
               value={formData.product}
@@ -121,15 +119,6 @@ const ShoppingForm = () => {
                 step="0.01"
               />
             </span>
-          </label>
-          <label>
-            Quantidade:
-            <input
-              type="number"
-              name="quantity"
-              value={formData.quantity}
-              onChange={handleChange}
-            />
           </label>
         </div>
       </div>
